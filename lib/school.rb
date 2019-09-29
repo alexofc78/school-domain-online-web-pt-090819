@@ -7,17 +7,20 @@ class School
     @roster = {}
   end
   
-  def add_student(student_name, grade)
-    if roster[grade]
-      roster[grade] << student_name
-    else
-      roster[grade] = []
-      roster[grade] << student_name
-    end
-  end
+def add_student(student_name, grade)
   
-#  def roster
-#    @roster =
-#  end
+    if !roster[grade]
+      roster[grade] = []
+    end
+    roster[grade] << student_name
+    
+#    if roster[grade]
+#      roster[grade] << student_name
+#    else
+#      roster[grade] = []
+#      roster[grade] << student_name
+#    end
+    end
+  
 
 end
